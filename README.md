@@ -1,9 +1,9 @@
-# 📊 Trabajo Práctico: Migración y Consultas Avanzadas en SQL Server
+#  Trabajo Práctico: Migración y Consultas Avanzadas en SQL Server
 ## *Caso de Estudio: Base de Datos Sakila*
 
 ---
 
-### 🏛️ Datos Institucionales
+###  Datos Institucionales
 *   **Institución:** Instituto Superior Nuestra Señora de Luján del Buen Viaje
 *   **Materia:** Seminario de Actualización
 *   **Docente:** Jorge Insfran
@@ -12,7 +12,7 @@
 
 ---
 
-## 1. 🎯 Introducción y Objetivos
+## 1.  Introducción y Objetivos
 El presente proyecto documenta el proceso estratégico de análisis, corrección y optimización del script DDL para migrar la base de datos de muestra **Sakila** desde su especificación original en MySQL hacia Microsoft SQL Server. 
 
 El objetivo central del trabajo consiste en:
@@ -22,7 +22,7 @@ El objetivo central del trabajo consiste en:
 
 ---
 
-## 2. 🛠️ Desafíos Técnicos Resueltos en la Migración (DDL)
+## 2.  Desafíos Técnicos Resueltos en la Migración (DDL)
 
 ### 2.1. Resolución de Referencias Circulares y Orden de Compilación
 Uno de los principales inconvenientes identificados en las primeras etapas de ordenamiento del script fue la relación de dependencia mutua entre las entidades `tienda` y `empleado`.
@@ -51,9 +51,9 @@ Debido a que SQL Server no cuenta con el evento `BEFORE`[cite: 2], se optó por 
 
 ---
 
-## 3. 🚀 Optimización de Código y Buenas Prácticas (Eliminación de `SELECT *`)
+## 3.  Optimización de Código y Buenas Prácticas (Eliminación de `SELECT *`)
 
-En estricto cumplimiento con los criterios de evaluación relacionales y de rendimiento, se realizó una de las mejores prácticas sobre el script: **erradicar por completo el uso de comodines de selección masiva (`*`)**[cite: 2]. 
+En estricto cumplimiento con los criterios de evaluación relacionales y de rendimiento, se realizó una de las mejores prácticas sobre el script: **erradicar por completo el uso de comodines de selección masiva (`*`)**. 
 
 El uso de `SELECT *` introduce penalizaciones debido al tráfico de red redundante y el escaneo innecesario de páginas de datos, afectando especialmente a tablas con columnas pesadas como `foto` en la entidad `empleado` (definida como `VARBINARY(MAX)`).
 
@@ -98,7 +98,7 @@ Además del cambio de tipos de datos, durante una migración también es conveni
 
 ---
 
-## 5. 📸 Capturas de Pantalla y Evidencias de Ejecución
+## 5.  Capturas de Pantalla y Evidencias de Ejecución
 
 Las capturas de pantalla que evidencian la correcta ejecución del proceso de migración, la creación de la base de datos y la posterior carga de los datos se encuentran organizadas en la carpeta **`Capturasdepantalla`** dentro de este repositorio.
 
@@ -108,5 +108,5 @@ En dicha carpeta se incluyen las siguientes evidencias visuales del proceso:
 
 ---
 
-## 6. 🏁 Conclusiones
+## 6.  Conclusiones
 La migración exitosa del modelo Sakila a SQL Server demuestra que la adaptabilidad de un esquema relacional no solo requiere el mapeo directo de tipos de datos, sino también la comprensión de cómo cada motor gestiona la integridad referencial, el orden de compilación y los eventos de los triggers. 
