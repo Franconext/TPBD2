@@ -104,7 +104,7 @@ Las capturas de pantalla que evidencian la correcta ejecución del proceso de mi
 
 En dicha carpeta se incluyen las siguientes evidencias visuales del proceso:
 *   **Evidencias de Estructura (DDL):** Las primeras cuatro capturas de pantalla muestran la ejecución secuencial del script y la confirmación de la creación exitosa de las tablas principales en SQL Server.
-*   **Evidencia de Carga de Datos (DML):** La última captura de pantalla certifica el proceso de inserción de datos (inserts)[cite: 1], mostrando el panel con el conteo de filas afectadas y confirmando que los registros se subieron de manera íntegra.
+*   **Evidencia de Carga de Datos (DML):** La última captura de pantalla certifica el proceso de inserción de datos (inserts), mostrando el panel con el conteo de filas afectadas y confirmando que los registros se subieron de manera íntegra.
 
 ---
 
